@@ -1,3 +1,7 @@
+// S.C: O(3n) - visited array, bfs, queue
+// T.C: O(n)(queue) + O(2E)(for every node, we visit all its degrees(neighbouring nodes))
+
+
 class Solution {
   public:
     vector<int> bfs(vector<vector<int>> &adj) {
