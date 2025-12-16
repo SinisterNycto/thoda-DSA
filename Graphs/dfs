@@ -1,0 +1,31 @@
+// S.C: O(n) + O(n) + O(n) = O(n) - dfs, visited array, recursion stack space at worst
+// T.C: O(n)(visiting every node once) + O(2E)(for directed: O(E))
+
+class Solution {
+  private:
+    void dfsHelper(int node, vector<vector<int>>& adj, int visited[], vector<int>& dfs){
+        visited[node] = 1;
+        dfs.push_back(node);
+        
+        // traverse all its neighbours
+        
+        for(auto it: adj[node]){
+            if(!visited[it]){
+                dfsHelper(it, adj, visited, dfs);
+            }
+        }
+    }
+    
+  public:
+    vector<int> dfs(vector<vector<int>>& adj) {
+        int V = adj.size();
+        int visited[V] = {0}; // if one-based indexing, size: V + 1
+        int start = 0; // starting node
+        
+        vector<int> dfs;
+        
+        dfsHelper(start, adj, visited, dfs);
+        
+        return dfs;
+    }
+};
