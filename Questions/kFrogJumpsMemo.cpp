@@ -1,3 +1,7 @@
+// follow up question of frog jump:  u are allowed to jump from i to i + 1, i + 2, .....,i + k
+
+// input: heights: [10, 20, 30, 10] , n = 4, k = 2
+// output: 20
 #include <bits/stdc++.h>
 using namespace std;
 
