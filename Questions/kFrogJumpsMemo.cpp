@@ -2,6 +2,9 @@
 
 // input: heights: [10, 20, 30, 10] , n = 4, k = 2
 // output: 20
+
+// T.C: O(n * k)
+// S.C: O(n) + O(n)-> recursion stack space
 #include <bits/stdc++.h>
 using namespace std;
 
